@@ -4,17 +4,13 @@
       "vm_name": "es-devbox",
       "guest_os_type": "RedHat_64",
       "type": "virtualbox-iso",
-      "iso_url": "/Users/ppinette/Downloads/CentOS-7.0-1406-x86_64-Minimal.iso",
-      "iso_checksum": "e3afe3f1121d69c40cc23f0bafa05e5d",
+      "iso_url": "/Users/ppinette/Downloads/CentOS-7.0-1406-x86_64-NetInstall.iso",
+      "iso_checksum": "96de4f38a2f07da51831153549c8bd0c",
       "iso_checksum_type": "md5",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_wait_timeout": "50000s",
-      "headless": "true",
       "disk_size": "4000",
-      "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter>"
-      ],
       "vboxmanage": [
         [
           "modifyvm",
@@ -29,6 +25,7 @@
           "2"
         ]
       ],
+      "boot_wait": "10s",
       "http_directory": ".",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter>"
