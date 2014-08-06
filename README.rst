@@ -28,11 +28,16 @@ _____
 
 - Validate template
 
-  `packer validate basebox.json`
+  ``packer validate basebox.json``
 
 - Initiate build
 
-  `packer build basebox.json`
+  ``packer build basebox.json``
+
+TODO
+----
+- Audit services and prune to bare minimum
+- Determine which (if any) services should be made available in base image
 
 Notes
 _____
