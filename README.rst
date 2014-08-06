@@ -4,7 +4,7 @@ packer-templates
 
 Packer_ template(s).
 
-Currently contains a Centos 7 template with Vagrant post-processor.
+Currently contains a Centos 7 template with Vagrant post-processor. Installation is automated via kickstart.
 
 The current intention is to create a docker host for local use.
 
