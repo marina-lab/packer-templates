@@ -32,9 +32,9 @@
     {
       "type": "shell",
       "inline": [
-        "mount -o loop /home/vagrant/VBoxGuestAdditions.iso /mnt",
-        "/mnt/VBoxLinuxAdditions.run",
-        "umount /mnt",
+        "sudo mount -o loop /home/vagrant/VBoxGuestAdditions.iso /mnt",
+        "sudo /mnt/VBoxLinuxAdditions.run",
+        "sudo umount /mnt",
         "rm -rf VBoxGuestAdditions.iso"
       ]
     }
