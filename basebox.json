@@ -28,6 +28,17 @@
       "shutdown_command": "echo 'vagrant' | sudo -S /sbin/halt -h -p"
     }
   ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "mount -o loop /home/vagrant/VBoxGuestAdditions.iso /mnt",
+        "/mnt/VBoxLinuxAdditions.run",
+        "umount /mnt",
+        "rm -rf VBoxGuestAdditions.iso"
+      ]
+    }
+  ],
   "post-processors": [
     {
       "type": "vagrant",
