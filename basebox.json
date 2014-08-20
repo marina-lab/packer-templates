@@ -1,7 +1,7 @@
 {
   "builders": [
     {
-      "vm_name": "es-devbox",
+      "vm_name": "centos7_base",
       "guest_os_type": "RedHat_64",
       "type": "virtualbox-iso",
       "iso_url": "http://mirror.rackspace.com/CentOS/7.0.1406/isos/x86_64/CentOS-7.0-1406-x86_64-NetInstall.iso",
@@ -35,8 +35,14 @@
         "sudo mount -o loop /home/vagrant/VBoxGuestAdditions.iso /mnt",
         "sudo /mnt/VBoxLinuxAdditions.run",
         "sudo umount /mnt",
-        "rm -rf VBoxGuestAdditions.iso"
+        "rm -rf VBoxGuestAdditions.iso",
+        "mkdir -m 700 ~/.ssh"
       ]
+    },
+    {
+      "type": "file",
+      "source": "vagrant_insecure.pub",
+      "destination": "~/.ssh/authorized_keys"
     }
   ],
   "post-processors": [
