@@ -36,14 +36,14 @@ _____
 
 TODO
 ----
-- Audit services and prune to bare minimum
-- Determine which (if any) services should be made available in base image
+- None right now!
 
 Notes
 _____
 
 - When debugging build issues, remove headless flag from basebox.json
 - For faster build, download iso and modify iso_url value in basebox.json to fs path
+  - Note: this might not be necessary. Subsequent builds seem to use a cached copy of the downloaded iso.
 
 .. _Packer: http://www.packer.io/
 .. _`Packer Docs`: http://www.packer.io/docs/installation.html
